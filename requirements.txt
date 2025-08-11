@@ -1,0 +1,9 @@
+sentence-transformers
+faiss-cpu
+fastapi
+uvicorn
+pdfminer.six
+python-docx
+pillow
+pytesseract
+nltk
