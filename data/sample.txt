@@ -1,0 +1,7 @@
+Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, especially computer systems. Applications of AI include expert systems, natural language processing, speech recognition, and machine vision.
+
+Machine learning is a subset of AI that enables systems to learn and improve from experience without being explicitly programmed.
+
+Privacy and security are critical when deploying AI in real-world scenarios to protect sensitive data.
+
+Recent advances in GPUs have accelerated deep learning models, making AI more accessible and powerful.
