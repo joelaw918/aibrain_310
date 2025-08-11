@@ -13,25 +13,27 @@ It’s now ready for **Phase 6** (FastAPI + Chat UI).
 ---
 
 ## 📂 Project Structure
+
+```text
 aibrain/
 │
 ├── ingestion/
-│ └── memory_ingest.py # Loads docs, chunks text, generates embeddings, saves FAISS index
+│   └── memory_ingest.py        # Loads docs, chunks text, generates embeddings, saves FAISS index
 │
 ├── search/
-│ └── memory_search.py # Loads FAISS index, allows interactive search
+│   └── memory_search.py        # Loads FAISS index, allows interactive search
 │
 ├── index/
-│ ├── faiss_index.index # Saved FAISS vector index
-│ └── chunks_metadata.json # Chunk metadata (source file, chunk_id, etc.)
+│   ├── faiss_index.index       # Saved FAISS vector index
+│   └── chunks_metadata.json    # Chunk metadata (source file, chunk_id, etc.)
 │
-├── data/ # Your input documents/images
-│ ├── *.pdf
-│ ├── *.docx
-│ ├── *.txt
-│ └── *.jpg / *.png
+├── data/                       # Your input documents/images
+│   ├── *.pdf
+│   ├── *.docx
+│   ├── *.txt
+│   └── *.jpg / *.png
 │
-└── README.md # This file
+└── README.md                   # This file
 
 ---
 
