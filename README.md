@@ -1,14 +1,6 @@
-# AI Brain – Document Memory & Search
+# 🧠 AI Brain – Document & Image Memory Search
 
-This project implements **Phases 1–5** of a local Retrieval-Augmented Generation (RAG) pipeline:
-
-- Document ingestion & chunking
-- Embedding generation
-- FAISS vector index creation
-- Optional OCR for images
-- Vector search testing
-
-It’s now ready for **Phase 6** (FastAPI + Chat UI).
+A simple system to **ingest documents and images**, chunk and embed their text content, store it in a **FAISS** vector index, and perform **semantic search**.
 
 ---
 
@@ -34,89 +26,67 @@ aibrain/
 │   └── *.jpg / *.png
 │
 └── README.md                   # This file
+⚙️ Installation
+Clone the repository
 
----
-
-## 📦 Installation
-
-```bash
-# 1. Clone this repo
-git clone <your_repo_url>
+git clone https://github.com/yourusername/aibrain.git
 cd aibrain
+Create & activate environment
 
-# 2. Create a virtual environment (recommended)
-conda create -n aibrain_310 python=3.10
+conda create -n aibrain_310 python=3.10 -y
 conda activate aibrain_310
+Install dependencies
 
-# 3. Install dependencies
 pip install -r requirements.txt
-
-requirements.txt example:
-
-sentence-transformers
-faiss-cpu
-pdfminer.six
-python-docx
-Pillow
-pytesseract
-nltk
-
-⚙️ Usage
-1️⃣ Ingest Documents
-Place your .pdf, .docx, .txt, and image files (.jpg, .png, etc.) in the data/ folder.
-
-Run ingestion:
+📥 Ingest Data
+Place your .pdf, .docx, .txt, and .jpg/.png files into the data/ folder, then run:
 
 python ingestion/memory_ingest.py
+This will:
 
-2️⃣ Search the Memory
+Extract text (via PDFMiner, python-docx, direct read, or Tesseract OCR for images).
 
+Chunk text into smaller pieces.
+
+Generate embeddings using SentenceTransformers.
+
+Save the FAISS index and metadata into the index/ folder.
+
+🔍 Search the Memory
 Run:
+
 python search/memory_search.py
-
-Enter your query (or 'exit' to quit): AI
-
 Example:
 
+Enter your query (or 'exit' to quit): AI
 Top matches:
 ai.docx (chunk 0), distance: 0.9128
 ai.pdf (chunk 0), distance: 0.9128
 sample.txt (chunk 0), distance: 0.9128
+📦 Dependencies
+sentence-transformers – For embeddings
 
-🔍 How It Works
-Document Ingestion
+faiss – For vector search
 
-Reads PDFs, DOCX, TXT, and images
+pdfminer.six – For PDF text extraction
 
-OCR for scanned images
+python-docx – For Word document parsing
 
-Chunks text into manageable sections
+Pillow – For image handling
 
-Embedding Generation
+pytesseract – For OCR
 
-Uses sentence-transformers model (all-MiniLM-L6-v2)
+nltk – For sentence tokenization
 
-Converts text chunks into numerical vectors
+🚀 Next Steps
+Improve OCR preprocessing for better accuracy on images.
 
-FAISS Index
+Add support for more file formats.
 
-Stores vectors in a FAISS index (IndexFlatL2)
+Implement a web UI for easier searching.
 
-Enables fast similarity search
+📝 License
+MIT License – feel free to use and modify.
 
-Search
 
-Encodes the query to a vector
-
-Retrieves the top-k most relevant chunks
-
-🛠 Next Steps (Phase 6)
-Add FastAPI backend for API access
-
-Implement chat interface (HTML/JS)
-
-Integrate with local LLM for end-to-end RAG
-
-📜 License
-MIT License
-
+---
