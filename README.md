@@ -26,7 +26,9 @@ aibrain/
 │   └── *.jpg / *.png
 │
 └── README.md                   # This file
-⚙️ Installation
+```text
+---
+## ⚙️ Installation
 Clone the repository
 
 git clone https://github.com/yourusername/aibrain.git
@@ -38,7 +40,10 @@ conda activate aibrain_310
 Install dependencies
 
 pip install -r requirements.txt
-📥 Ingest Data
+
+---
+
+## 📥 Ingest Data
 Place your .pdf, .docx, .txt, and .jpg/.png files into the data/ folder, then run:
 
 python ingestion/memory_ingest.py
@@ -52,7 +57,9 @@ Generate embeddings using SentenceTransformers.
 
 Save the FAISS index and metadata into the index/ folder.
 
-🔍 Search the Memory
+---
+
+##🔍 Search the Memory
 Run:
 
 python search/memory_search.py
@@ -63,7 +70,10 @@ Top matches:
 ai.docx (chunk 0), distance: 0.9128
 ai.pdf (chunk 0), distance: 0.9128
 sample.txt (chunk 0), distance: 0.9128
-📦 Dependencies
+
+---
+
+##📦 Dependencies
 sentence-transformers – For embeddings
 
 faiss – For vector search
@@ -78,14 +88,18 @@ pytesseract – For OCR
 
 nltk – For sentence tokenization
 
-🚀 Next Steps
+---
+
+
+##🚀 Next Steps
 Improve OCR preprocessing for better accuracy on images.
 
 Add support for more file formats.
 
 Implement a web UI for easier searching.
+---
 
-📝 License
+##📝 License
 MIT License – feel free to use and modify.
 
 
