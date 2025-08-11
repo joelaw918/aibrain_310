@@ -62,7 +62,7 @@ This will:
 
 ---
 
-##🔍 Search the Memory
+## 🔍 Search the Memory
 Run:
 ```text
 python search/memory_search.py
@@ -77,7 +77,7 @@ sample.txt (chunk 0), distance: 0.9128
 ```
 ---
 
-##📦 Dependencies
+## 📦 Dependencies
 - sentence-transformers – For embeddings
 - faiss – For vector search
 - pdfminer.six – For PDF text extraction
@@ -89,13 +89,14 @@ sample.txt (chunk 0), distance: 0.9128
 ---
 
 
-##🚀 Next Steps
--Improve OCR preprocessing for better accuracy on images.
--Add support for more file formats.
--Implement a web UI for easier searching.
+## 🚀 Next Steps
+- Improve OCR preprocessing for better accuracy on images.
+- Add support for more file formats.
+- Implement a web UI for easier searching.
 ---
 
-##📝 License
+## 📝 License
+
 MIT License – feel free to use and modify.
 
 
